@@ -1,0 +1,139 @@
+.patient-card {
+  background-color: #fff;
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  max-width: 300px;
+  width: 100%;
+}
+
+.patient-card__header {
+  padding: 1rem 1.5rem;
+  padding-bottom: 0;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.patient-card__header-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #000;
+  height: 30px;
+  width: 30px;
+  border-radius: 50px;
+}
+
+.patient-card__image-section {
+  padding: 1rem;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 9px;
+}
+
+.patient-card__image-section img {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: contain;
+}
+
+.patient-card__content-section {
+  padding: 1.5rem;
+  background: white;
+}
+
+.patient-card__name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.2;
+}
+
+.patient-card__description {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.4;
+  margin: 0 0 1.5rem 0;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.patient-card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.patient-card__info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.patient-card__id {
+  font-size: 0.8rem;
+  color: #888;
+  font-weight: 500;
+}
+
+.patient-card__action-btn {
+  background: transparent;
+  color: #7345fc;
+  border: none;
+  outline: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.patient-card__action-btn:hover {
+  color: #5a2fc7;
+}
+
+.patient-card__expanded-content {
+  padding-top: 1rem;
+  margin-top: 1rem;
+  border-top: 1px solid #e1e5e9;
+  animation: slideDown 0.3s ease-out;
+}
+
+.patient-card__website,
+.patient-card__id,
+.patient-card__created {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.patient-card__website-link {
+  color: #7345fc;
+  text-decoration: none;
+  margin-left: 0.5rem;
+  font-weight: 500;
+  word-break: break-word;
+}
+
+.patient-card__website-link:hover {
+  text-decoration: underline;
+  color: #5a2fc7;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

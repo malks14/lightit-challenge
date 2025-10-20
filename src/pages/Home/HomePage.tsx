@@ -108,7 +108,7 @@ const HomePage = () => {
         <ReusableModal
           isOpen={isEditModalOpen}
           onClose={handleEditCancel}
-          title="Edit Patient"
+          title="Edit patient"
         >
           <PatientForm 
             patient={selectedPatient!} 
@@ -120,7 +120,7 @@ const HomePage = () => {
         <ReusableModal
           isOpen={isAddModalOpen}
           onClose={handleAddCancel}
-          title="Add New Patient"
+          title="Add patient"
         >
           <PatientForm 
             onSubmit={handleAddSubmit} 
@@ -131,7 +131,7 @@ const HomePage = () => {
         <ReusableModal
           isOpen={showDeleteConfirm}
           onClose={cancelDelete}
-          title="Delete Patient"
+          title="Delete patient"
         >
           <div className="delete-confirmation__container">
             <p>Are you sure you want to delete <strong>{patientToDelete?.name}</strong>?</p>
@@ -142,7 +142,7 @@ const HomePage = () => {
                 Cancel
               </button>
               <button onClick={confirmDelete} className="btn btn--danger">
-                Delete Patient
+                Delete patient
               </button>
             </div>
           </div>

@@ -44,7 +44,7 @@ const PatientCard = ({ patient, onEdit, onDelete }: PatientCardProps) => {
     },
     {
       id: 'delete',
-      label: 'Delete Patient',
+      label: 'Delete patient',
       icon: 'fas fa-trash',
       onClick: () => onDelete(patient.id),
       danger: true

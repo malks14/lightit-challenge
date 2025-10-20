@@ -131,8 +131,6 @@ npm run format:check
 
 - **ESLint** - For linting
 - **Prettier** - For code formatting
-- **TypeScript Importer** - For auto-imports
-- **Auto Rename Tag** - For HTML/JSX tags
 
 ## Features Overview
 

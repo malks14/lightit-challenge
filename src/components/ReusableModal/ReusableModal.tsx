@@ -46,7 +46,9 @@ interface ReusableModalProps {
               <i className="fa-solid fa-xmark"></i>
             </button>
           </div>
+          <div className="reusable-modal__content">
             {children}
+          </div>
 
         </div>
       </>

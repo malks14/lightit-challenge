@@ -41,7 +41,7 @@ npm --version
 ### 1. Clone the Repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/malks14/lightit-challenge.git
 cd lightit-challenge
 ```
 

@@ -1,5 +1,5 @@
 // In HomePage.tsx
-import React from 'react';
+import React, { useState } from 'react';
 import PatientCard from '../../components/PatientCard/PatientCard';
 import ReusableModal from '../../components/ReusableModal/ReusableModal';
 import PatientForm from '../../components/PatientForm/PatientForm';
@@ -10,6 +10,7 @@ import './HomePage.css';
 import { Patient } from '../../types/patients';
 
 const HomePage = () => {
+  const [expandedPatientId, setExpandedPatientId] = useState<string | null>(null);
   const {
     filteredPatients,
     isLoading,
@@ -79,6 +80,12 @@ const HomePage = () => {
     setIsAddModalOpen(false);
   };
 
+  
+  
+  const handleToggleExpand = (patientId: string) => {
+    setExpandedPatientId(prev => (prev === patientId ? null : patientId));
+  };
+
   return (
     <main className="home-page__container">
       <div>
@@ -99,12 +106,13 @@ const HomePage = () => {
                 patient={patient} 
                 onEdit={handleEditPatient}
                 onDelete={handleDeletePatient}
+                isExpanded={expandedPatientId === patient.id}
+                onToggleExpand={handleToggleExpand}
               />
             ))}
           </div>
         )}
         
-        {/* Modals */}
         <ReusableModal
           isOpen={isEditModalOpen}
           onClose={handleEditCancel}

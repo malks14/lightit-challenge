@@ -8,10 +8,11 @@ interface PatientCardProps {
   patient: Patient;
   onEdit: (patient: Patient) => void;
   onDelete: (patientId: string) => void;
+  isExpanded: boolean;
+  onToggleExpand: (patientId: string) => void;
 }
 
-const PatientCard = ({ patient, onEdit, onDelete }: PatientCardProps) => {
-  const [isExpanded, setIsExpanded] = useState(false);
+const PatientCard = ({ patient, onEdit, onDelete, isExpanded, onToggleExpand }: PatientCardProps) => {
   const [imageError, setImageError] = useState(false);
 
   const handleImageError = () => {
@@ -100,7 +101,7 @@ const PatientCard = ({ patient, onEdit, onDelete }: PatientCardProps) => {
         <footer className="patient-card__footer">
           <button 
             className="patient-card__action-btn"
-            onClick={() => setIsExpanded(!isExpanded)}
+            onClick={() => onToggleExpand(patient.id)}
           >
             {isExpanded ? 'Show less' : 'View more'}
           </button>

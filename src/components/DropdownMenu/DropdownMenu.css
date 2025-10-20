@@ -57,7 +57,10 @@
   gap: 12px;
   font-size: 14px;
   color: #333;
-  transition: background-color 0.2s ease;
+}
+
+.dropdown-menu__item i {
+    background-color: transparent;
 }
 
 .dropdown-menu__item:hover {
@@ -68,7 +71,7 @@
   color: #dc3545;
 }
 
-.dropdown-menu__item--danger:hover {
+.dropdown-menu__item--danger:hover, .dropdown-menu__item__label--danger:hover {
   background-color: #f8d7da;
 }
 
@@ -76,3 +79,4 @@
   width: 16px;
   text-align: center;
 }
+

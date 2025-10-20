@@ -83,8 +83,8 @@ const DropdownMenu = ({ trigger, items, position = 'bottom-right' }: DropdownMen
               className={`dropdown-menu__item ${item.danger ? 'dropdown-menu__item--danger' : ''}`}
               onClick={() => handleItemClick(item)}
             >
-              {item.icon && <i className={item.icon}></i>}
-              <span>{item.label}</span>
+               <i className={item.icon}></i>
+              {item.label}
             </button>
           ))}
         </div>

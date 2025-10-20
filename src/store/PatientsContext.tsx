@@ -92,18 +92,17 @@ export const PatientsProvider = ({ children }: PatientsProviderProps) => {
     fetchPatients();
   }, []);
 
-  const filteredPatients = patients
-    .filter(
-      (patient) =>
-        patient.name.toLowerCase().includes(filter.toLowerCase()) ||
-        patient.description.toLowerCase().includes(filter.toLowerCase())
+  const safePatients = Array.isArray(patients) ? patients : [];
+
+  const filteredPatients = safePatients
+    .filter((patient) =>
+      patient.name.toLowerCase().includes(filter.toLowerCase()) ||
+      (patient.description || '').toLowerCase().includes(filter.toLowerCase())
     )
     .sort((a, b) => {
       switch (sortBy) {
         case 'date':
-          return (
-            new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
-          );
+          return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
         default:
           return 0;
       }

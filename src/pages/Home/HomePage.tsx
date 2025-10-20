@@ -97,13 +97,17 @@ const HomePage = () => {
         </div>
         
         {isLoading ? (
-          <LoadingSpinner size="large"/>
+          <LoadingSpinner size="large" />
+        ) : filteredPatients.length === 0 ? (
+          <div className="empty-state">
+            <h2>No patients found</h2>
+          </div>
         ) : (
           <div className="patients-container">
             {filteredPatients.map((patient) => (
-              <PatientCard 
-                key={patient.id} 
-                patient={patient} 
+              <PatientCard
+                key={patient.id}
+                patient={patient}
                 onEdit={handleEditPatient}
                 onDelete={handleDeletePatient}
                 isExpanded={expandedPatientId === patient.id}

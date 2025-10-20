@@ -3,6 +3,7 @@ import type { Patient } from '../../types/patients';
 import './PatientCard.css';
 import placeholderImage from '../../assets/Profile_avatar_placeholder_large.png';
 import DropdownMenu from '../DropdownMenu/DropdownMenu';
+import { formatDate } from '../../utils/dateFormatter';
 
 interface PatientCardProps {
   patient: Patient;
@@ -93,7 +94,7 @@ const PatientCard = ({ patient, onEdit, onDelete, isExpanded, onToggleExpand }: 
               <strong>ID:</strong> {patient.id}
             </div>
             <div className="patient-card__created">
-              <strong>Created:</strong> {new Date(patient.createdAt).toLocaleDateString()}
+              <strong>Created:</strong> {formatDate(patient.createdAt)}
             </div>
           </div>
         )}

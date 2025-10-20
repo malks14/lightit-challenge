@@ -120,6 +120,7 @@ src/
 - **Add Patients**: Create new patient records with validation
 - **Edit Patients**: Update existing patient information
 - **Delete Patients**: Remove patients with confirmation modal
+- **Card-based Listing (Challenge Requirement)**: Patient records are displayed in cards, as requested by the challenge specification, providing a clear, scannable layout.
 - **View Details**: Expandable patient cards with additional information
 
 ### Search & Filter
@@ -185,7 +186,7 @@ The application integrates with a mock API for patient data:
 ### Patient Cards Design
 - **Minimal Information Display**: Cards show only essential information (name, basic description) to allow quick patient recognition without overwhelming the interface.
 - **Progressive Disclosure**: The "View more" CTA reveals additional patient details (website, ID, creation date) when needed, maintaining a clean initial view while providing access to complete information.
-- **Ellipsis Menu**: Implemented a three-dot menu in the top-right corner of each card, following established UI patterns that users are already familiar with from other applications.
+- **Ellipsis Menu**: Implemented a three-dot menu in the top-right corner of each card, following established UI patterns that users are already familiar with. This also reduces visual clutter by moving secondary actions (e.g., Edit, Delete) into a compact menu instead of displaying multiple competing buttons on the card.
 
 ### Component Architecture
 

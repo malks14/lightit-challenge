@@ -138,3 +138,9 @@ body {
 .ToastRoot--info {
   border-left: 4px solid #3b82f6;
 }
+
+@media (max-width: 768px) {
+  .toast-viewport {
+    width: 290px;
+  }
+}

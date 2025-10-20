@@ -9,7 +9,7 @@ const router = createBrowserRouter(routes)
 export default function App() {
   return (
     <PatientsProvider>
-      <Toast.Provider swipeDirection="right">
+      <Toast.Provider swipeDirection="right" duration={3000}>
         <RouterProvider router={router} />
         <Toast.Viewport className="toast-viewport" />
       </Toast.Provider>

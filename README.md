@@ -214,5 +214,5 @@ The application integrates with a mock API for patient data:
 
 ## Author
 
-Created as part of the LightIt challenge.
+Created as part of the light-it challenge.
 

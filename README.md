@@ -109,24 +109,6 @@ src/
 
 ## Development Workflow
 
-### Code Quality
-
-This project uses ESLint and Prettier for code quality:
-
-```bash
-
-npm run lint
-
-
-npm run lint:fix
-
-
-npm run format
-
-
-npm run format:check
-```
-
 ### Recommended VS Code Extensions
 
 - **ESLint** - For linting
@@ -179,7 +161,7 @@ npx tsc --noEmit
 npm run lint:fix
 ```
 
-## 🌐 API Integration
+## API Integration
 
 The application integrates with a mock API for patient data:
 
